@@ -49,19 +49,22 @@
         </GroupBox>
         <Label x:Name="IblQuantity" Content="Quantity" HorizontalAlignment="Left" Margin="91,267,0,0" VerticalAlignment="Top"/>
         <Button Content="Remove Item" HorizontalAlignment="Left" Margin="624,314,0,0" VerticalAlignment="Top" Click="Button_Click" Width="103"/>
-        <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="131" Margin="0,26,0,0">
+        <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="230">
             <MenuItem Header="File">
-                <MenuItem Header="Exit"/>
+                <MenuItem Header="Exit" Click="exitToolStripMenuItem_Click"/>
             </MenuItem>
-            <MenuItem Header="Doughnuts" Click="MenuItem_Click">
-                <MenuItem Header="Make"/>
-                      <MenuItem Header="Raised"/>
-                            <MenuItem x:Name="glazedMenuItem" Header="Glazed"/>
-                            <MenuItem x:Name="sugarMenuItem" Header="Sugar"/>
-                      <MenuItem/>
-             <MenuItem Header="Filled"/>
-                
-             </MenuItem>
+            <MenuItem Header="_Doughnuts">
+                <MenuItem Header="Make">
+                    <MenuItem Header="Raised">
+                        <MenuItem x:Name="glazedToolStripMenuItem" Header="Glazed"
+Click="glazedToolStripMenuItem_Click" IsCheckable="True"/>
+                        <MenuItem x:Name="sugarToolStripMenuItem" Header="Sugar"
+IsCheckable="True" Click="sugarToolStripMenuItem_Click"/>
+                    </MenuItem>
+                    <MenuItem Header="Filled"/>
+                </MenuItem>
+                <MenuItem x:Name="mnuStop" Header="Stop"/>
+            </MenuItem>
         </Menu>
 
     </Grid>
